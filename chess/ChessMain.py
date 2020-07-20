@@ -3,7 +3,8 @@ This is the main driver file. It will handle user input and display the current 
 """
 
 import pygame as p
-from chess import ChessEngine
+from ChessEngine import GameState
+
 
 p.init() #initialize pygame
 width = height = 512
@@ -57,8 +58,3 @@ def drawBoard(screen):
 
 def drawPieces(scree, board):
     pass
-
-
-
-if __name__ == "__main__":
-    main()
