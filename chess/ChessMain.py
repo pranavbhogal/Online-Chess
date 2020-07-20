@@ -5,7 +5,6 @@ This is the main driver file. It will handle user input and display the current 
 import pygame as p
 from ChessEngine import GameState
 
-
 p.init() #initialize pygame
 width = height = 512
 dimension = 8
@@ -31,7 +30,7 @@ def main():
     screen = p.display.set_mode((width, height))
     clock = p.time.Clock()
     screen.fill(p.Color("white"))
-    gs = ChessEngine.GameState()
+    gs = GameState()
     load_images()
     running = True
     while running:
@@ -58,3 +57,5 @@ def drawBoard(screen):
 
 def drawPieces(scree, board):
     pass
+
+main()
