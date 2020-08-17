@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8351bf37-00b4-413a-9bc4-7c63b8fc435c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/chess_se181.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eVKLDMnbtzTkL6sGbM8IbH1p2Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="chess" type="PythonConfigurationType" factoryName="Python">
+      <module name="chess_se181" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\prana\chessgame\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8351bf37-00b4-413a-9bc4-7c63b8fc435c" name="Default Changelist" comment="" />
+      <created>1594401261845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594401261845</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2057" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594401593283">
+      <screen x="1920" y="190" width="1366" height="728" />
+    </state>
+    <state x="2057" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.190.1366.728@1920.190.1366.728" timestamp="1594401593283" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1594401697338">
+      <screen x="1920" y="190" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.190.1366.728@1920.190.1366.728" timestamp="1594401697338" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1594401697338">
+      <screen x="1920" y="190" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1536.824/1920.190.1366.728@1920.190.1366.728" timestamp="1594401697338" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1594401697338">
+      <screen x="1920" y="190" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1536.824/1920.190.1366.728@1920.190.1366.728" timestamp="1594401697338" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1594401697338">
+      <screen x="1920" y="190" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1536.824/1920.190.1366.728@1920.190.1366.728" timestamp="1594401697338" />
+    <state x="2354" y="274" key="RollbackChangesDialog" timestamp="1594401485014">
+      <screen x="1920" y="190" width="1366" height="728" />
+    </state>
+    <state x="2354" y="274" key="RollbackChangesDialog/0.0.1536.824/1920.190.1366.728@1920.190.1366.728" timestamp="1594401485014" />
+  </component>
+</project>
