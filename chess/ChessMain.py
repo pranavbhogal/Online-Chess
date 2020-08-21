@@ -4,6 +4,7 @@ This is the main driver file. It will handle user input and display the current 
 
 import pygame as p
 from ChessEngine import GameState
+import os
 
 p.init() #initialize pygame
 width = height = 512
@@ -16,9 +17,11 @@ images = {}
 Initialize a global dictionary of images. Called exactly once in the main.
 """
 def load_images():
+    cwd = os.getcwd()
     pieces = ["wP", "wR", "wN", "wB", "wQ", "wK", "bP", "bR", "bN", "bB", "bQ", "bK"]
     for piece in pieces:
-        images[piece] = p.transform.scale(p.image.load("images/" + piece + ".png"), (sq_size, sq_size))
+        path = cwd+"/images/" + piece + ".png"
+        images[piece] = p.transform.scale(p.image.load(path), (sq_size, sq_size))
         #we can access an image by saying 'images["wP"]'
 
 """
