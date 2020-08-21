@@ -5,7 +5,7 @@ This is the main driver file. It will handle user input and display the current 
 import pygame as p
 import ChessEngine
 
-from chess.ChessEngine import GameState
+# from chess.ChessEngine import GameState
 
 p.init() #initialize pygame
 width = height = 512
