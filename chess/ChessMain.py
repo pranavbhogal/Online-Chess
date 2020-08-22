@@ -3,8 +3,7 @@ This is the main driver file. It will handle user input and display the current 
 """
 
 import pygame as p
-# from ChessEngine import *
-
+from chess import ChessEngine
 from chess.ChessEngine import GameState
 
 p.init() #initialize pygame
