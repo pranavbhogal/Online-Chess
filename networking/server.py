@@ -1,71 +1,58 @@
-"""
-This is the main server file.
-"""
-
-<<<<<<< Updated upstream
-=======
 import socket
-import pickle
 from _thread import *
-from player import Player
+import sys
 
-# server is currently set to Kendal's local IPv4 Address
-# change to your own for testing
-server = "192.168.1.39"
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+server = '97.107.134.52'
 port = 5555
 
-# socket.AF_INET & socket.SOCK_STREAM specify the type of connection/stream
-# we'll use these to connect to an ipv4 address
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_ip = socket.gethostbyname(server)
 
 try:
     s.bind((server, port))
+
 except socket.error as e:
-    str(e)
+    print(str(e))
 
-# open port and listen for connections, setting to 2 to allow 2 players
 s.listen(2)
-print("Server started, waiting for a connection")
+print("Waiting for a connection")
 
-players = [Player(0,0,50,50,(255,0,0)), Player(100,100,50,50,(0,0,255))]
-
-def threaded_client(conn, player):
-
-    conn.send(pickle.dumps(players[player]))
-    reply = ""
+currentId = "0"
+pos = ["0:50,50", "1:100,100"]
+def threaded_client(conn):
+    global currentId, pos
+    conn.send(str.encode(currentId))
+    currentId = "1"
+    reply = ''
     while True:
         try:
-            # larger the size of the bits, the longer it takes to receive information
-            data = pickle.loads(conn.recv(2048))  # "45, 67" -> (45, 67)
-            players[player] = data
-
-
+            data = conn.recv(2048)
+            reply = data.decode('utf-8')
             if not data:
-                print("Disconnected")
+                conn.send(str.encode("Goodbye"))
                 break
             else:
-                if player == 1:
-                    reply = players[0]
-                else:
-                    reply = players[1]
+                print("Received: " + reply)
+                arr = reply.split(":")
+                id = int(arr[0])
+                pos[id] = reply
 
-                print("Received: ", data)
-                print("Sending: ", reply)
+                if id == 0: nid = 1
+                if id == 1: nid = 0
 
-            conn.sendall(pickle.dumps(reply))
+                reply = pos[nid][:]
+                print("Sending: " + reply)
+
+            conn.sendall(str.encode(reply))
         except:
             break
 
-    print("Lost connection")
+    print("Connection Closed")
     conn.close()
 
-currentPlayer = 0
 while True:
-    # conn is object connected,
-    # adrs is the address
-    conn, adrs = s.accept()
-    print("Connected to:", adrs)
+    conn, addr = s.accept()
+    print("Connected to: ", addr)
 
-    start_new_thread(threaded_client, (conn, currentPlayer))
-    currentPlayer += 1
->>>>>>> Stashed changes
+    start_new_thread(threaded_client, (conn,))

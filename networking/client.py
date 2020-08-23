@@ -1,8 +1,7 @@
 """
 This is the main client file.
 """
-<<<<<<< Updated upstream
-=======
+
 
 import pygame
 from network import Network
@@ -42,5 +41,3 @@ def main():
 main()
 
 
-
->>>>>>> Stashed changes
