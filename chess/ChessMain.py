@@ -1,10 +1,12 @@
 """
 This is the main driver file. It will handle user input and display the current GameState.
 """
-
+#For mac OS comment out lines 8 and 9
+#For Windows make lines 8 and 9 available while commenting line 7
 import pygame as p
-from chess import ChessEngine
-from chess.ChessEngine import GameState
+from ChessEngine import *
+#from chess import ChessEngine
+#from chess.ChessEngine import GameState
 
 p.init() #initialize pygame
 width = height = 512
@@ -72,7 +74,7 @@ def main():
                     sqSelected = (row, col)
                     playerClicks.append(sqSelected) #append for both first and second click
                 if len(playerClicks) == 2: #after 2nd click
-                    move = ChessEngine.Move(playerClicks[0], playerClicks[1], gs.board)
+                    move = Move(playerClicks[0], playerClicks[1], gs.board)
                     print(move.getChessNotation())
                     if move in validMoves:
                         gs.makeMove(move)
