@@ -1,11 +1,13 @@
 """
 This is the main server file.
-Run this file first. Then run client twice to add players.
 """
 
+<<<<<<< Updated upstream
+=======
 import socket
+import pickle
 from _thread import *
-import sys
+from player import Player
 
 # server is currently set to Kendal's local IPv4 Address
 # change to your own for testing
@@ -25,24 +27,17 @@ except socket.error as e:
 s.listen(2)
 print("Server started, waiting for a connection")
 
-def read_pos(str):
-    str = str.split(",")
-    return int(str[0]), int(str[1])
-
-def convert_pos(tup):
-    return str(tup[0]) + "," + str(tup[1])
-
-pos = [(0,0), (100,100)]
+players = [Player(0,0,50,50,(255,0,0)), Player(100,100,50,50,(0,0,255))]
 
 def threaded_client(conn, player):
 
-    conn.send(str.encode(convert_pos(pos[player])))
+    conn.send(pickle.dumps(players[player]))
     reply = ""
     while True:
         try:
             # larger the size of the bits, the longer it takes to receive information
-            data = read_pos(conn.recv(2048).decode())  # "45, 67" -> (45, 67)
-            pos[player] = data
+            data = pickle.loads(conn.recv(2048))  # "45, 67" -> (45, 67)
+            players[player] = data
 
 
             if not data:
@@ -50,14 +45,14 @@ def threaded_client(conn, player):
                 break
             else:
                 if player == 1:
-                    reply = pos[0]
+                    reply = players[0]
                 else:
-                    reply = pos[1]
+                    reply = players[1]
 
                 print("Received: ", data)
                 print("Sending: ", reply)
 
-            conn.sendall(str.encode(convert_pos(reply)))
+            conn.sendall(pickle.dumps(reply))
         except:
             break
 
@@ -73,3 +68,4 @@ while True:
 
     start_new_thread(threaded_client, (conn, currentPlayer))
     currentPlayer += 1
+>>>>>>> Stashed changes
