@@ -2,11 +2,11 @@
 This is the main driver file. It will handle user input and display the current GameState.
 """
 #For mac OS comment out lines 8 and 9
-#For Windows make lines 8 and 9 available while commenting line 7
+#For Windows make lines 9 available while commenting line 7
 import pygame as p
 #from ChessEngine import *
-from chess import ChessEngine
-from chess.ChessEngine import GameState
+#from chess import ChessEngine
+#from chess.ChessEngine import GameState, Move
 
 p.init() #initialize pygame
 width = height = 512
@@ -32,7 +32,7 @@ def drawGameState(screen, gs):
     drawPieces(screen, gs.board)
 
 def drawBoard(screen):
-    colors =  [p.Color("white"), p.Color("gray")]
+    colors = [p.Color("white"), p.Color("gray")]
     for i in range(dimension):
         for j in range(dimension):
             color = colors[(i+j)%2]
@@ -87,7 +87,7 @@ def main():
             #key Handlers
             elif e.type == p.KEYDOWN:
                 if e.key == p.K_z:
-                    gs.undoMove(move)
+                    gs.undoMove()
                     moveMade = True
 
         if moveMade:
