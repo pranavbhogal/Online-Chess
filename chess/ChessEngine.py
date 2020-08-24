@@ -3,6 +3,8 @@ This class is responsible for storing all the information about the current stat
 It will also be responsible for determining valid moves at the current chess state and will also keep a log
 of all the moves
 """
+import time
+
 
 class GameState():
     def __init__(self):
@@ -21,6 +23,19 @@ class GameState():
         self.moveLog = []
         self.whiteKingLocation = (7, 4)
         self.blackKingLocation = (0, 4)
+
+        self.p1Name = "Player 1"
+        self.p2Name = "Player 2"
+
+        self.turn = "White"
+
+        self.winner = None
+        self.ready = False
+
+        self.startTime = time.time()
+        self.storedTime1 = 0
+        self.storedTime2 = 0
+
 
     def makeMove(self, move):
         self.board[move.startRow][move.startCol] = "--"
