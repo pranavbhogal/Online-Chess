@@ -23,7 +23,6 @@ class GameState():
         self.moveLog = []
         self.whiteKingLocation = (7, 4)
         self.blackKingLocation = (0, 4)
-<<<<<<< Updated upstream
 
         self.p1Name = "Player 1"
         self.p2Name = "Player 2"
@@ -37,8 +36,6 @@ class GameState():
         self.storedTime1 = 0
         self.storedTime2 = 0
 
-
-=======
         self.inCheck = False
         self.pins = []
         self.checks = []
@@ -58,8 +55,7 @@ class GameState():
 
     def connected(self):
         return self.ready
-        
->>>>>>> Stashed changes
+
     def makeMove(self, move):
         self.board[move.startRow][move.startCol] = "--"
         self.board[move.endRow][move.endCol] = move.pieceMoved
@@ -70,14 +66,10 @@ class GameState():
             self.whiteKingLocation = (move.endRow, move.endCol)
         elif move.pieceMoved == "bK":
             self.blackKingLocation = (move.endRow, move.endCol)
-<<<<<<< Updated upstream
-=======
         
         #Pawn Promotion:
         if move.isPawnPromotion:
              self.board[move.endRow][move.endCol] = move.pieceMoved[0] + 'Q'
-
->>>>>>> Stashed changes
 
     def undoMove(self):
         if len(self.moveLog) != 0:
