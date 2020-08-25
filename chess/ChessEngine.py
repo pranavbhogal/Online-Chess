@@ -7,7 +7,7 @@ import time
 
 
 class GameState():
-    def __init__(self):
+    def __init__(self, id):
         self.board = [
             ["bR", "bN", "bB", "bQ", "bK", "bB", "bN", "bR"],
             ["bP", "bP", "bP", "bP", "bP", "bP", "bP", "bP"],
@@ -23,6 +23,7 @@ class GameState():
         self.moveLog = []
         self.whiteKingLocation = (7, 4)
         self.blackKingLocation = (0, 4)
+<<<<<<< Updated upstream
 
         self.p1Name = "Player 1"
         self.p2Name = "Player 2"
@@ -37,6 +38,28 @@ class GameState():
         self.storedTime2 = 0
 
 
+=======
+        self.inCheck = False
+        self.pins = []
+        self.checks = []
+        self.p1Went = False
+        self.p2Went = False
+        self.id = id
+        self.ready = False
+
+    def get_chess_board(self):
+        return self.board
+
+    def play(self, player):
+        if player == 0:
+            self.p1Went = True
+        else:
+            self.p2Went = True
+
+    def connected(self):
+        return self.ready
+        
+>>>>>>> Stashed changes
     def makeMove(self, move):
         self.board[move.startRow][move.startCol] = "--"
         self.board[move.endRow][move.endCol] = move.pieceMoved
@@ -47,6 +70,14 @@ class GameState():
             self.whiteKingLocation = (move.endRow, move.endCol)
         elif move.pieceMoved == "bK":
             self.blackKingLocation = (move.endRow, move.endCol)
+<<<<<<< Updated upstream
+=======
+        
+        #Pawn Promotion:
+        if move.isPawnPromotion:
+             self.board[move.endRow][move.endCol] = move.pieceMoved[0] + 'Q'
+
+>>>>>>> Stashed changes
 
     def undoMove(self):
         if len(self.moveLog) != 0:
