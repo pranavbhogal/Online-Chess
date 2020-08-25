@@ -1,0 +1,38 @@
+♕♕♕ Release Notes vA1.0 ♕♕♕
+----------------------------------
+-----------Preface----------------
+----------------------------------
+
+Chess Battlegrounds Version Alpha 1.0
+SE181 - Group 7
+Release of the team's chess game.
+8/24/2020
+----------------------------------
+---------Description--------------
+----------------------------------
+An online multiplayer chess game. 
+Supports up to two players on either Windows 
+or Mac devices.  
+----------------------------------
+---------Basic Guide--------------
+----------------------------------
+This guide will take you through game setup:
+1. Obtain source code from https://github.com/pranavbhogal/chess_se181
+2. Create a virtual environment.
+3. Install the required packages as stated in
+   the requirements.txt file
+3. Go to the project's root directory.
+4. Activate your virtual environment
+5. Run the launch file. 
+6. Click the newly opened window and wait for another player to join.
+7. Select a chess piece by clicking on it. Click another location to move it.
+8. Invalid movement locations will not be allowed. Select another location.
+9. If in check, the king must be moved out of check or another piece but block it.
+10. Users will be prompted upon a game over.
+----------------------------------
+----------------------------------
+For the future, we are planning these changes
+1. Inclusion of a submit button so allow for users to undo moves if they choose
+2. Improving server networking
+3. Serialization changes will be made, suchas not utilizing pickle and using json objects instead.
+ 
