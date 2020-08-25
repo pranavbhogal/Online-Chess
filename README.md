@@ -1,6 +1,7 @@
 # chess_se181
 
 After cloning the repo, 
+Navigate to the folder, Online Chess Game
 Change working directory to chess_se181
 Activate the virtual env with source venv/bin/activate
 
